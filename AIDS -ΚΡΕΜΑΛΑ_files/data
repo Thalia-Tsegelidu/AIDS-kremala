@@ -1,0 +1,1783 @@
+var AppClientAppData = {
+	"result": "SUCCESS",
+	"initparameters": "lang=GR&h1=text%7C%CE%A3%CF%8D%CE%BD%CE%B4%CF%81%CE%BF%CE%BC%CE%BF%20%CF%84%CE%B7%CF%82%20%CE%B5%CF%80%CE%AF%CE%BA%CF%84%CE%B7%CF%84%CE%B7%CF%82......&b1=%CE%91%CE%9D%CE%9F%CE%A3%CE%9F%CE%91%CE%9D%CE%95%CE%A0%CE%91%CE%A1%CE%9A%CE%95%CE%99%CE%91%CE%A3&h2=text%7C%CE%9F%20%CF%87%CF%81%CF%8C%CE%BD%CE%BF%CF%82%20...%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9%201-2%20%CE%BC%CE%AE%CE%BD%CE%B5%CF%82&b2=%CE%95%CE%A0%CE%A9%CE%91%CE%A3%CE%97%CE%A3%20&h3=text%7C%CE%9A%CF%8D%CF%84%CF%84%CE%B1%CF%81%CE%B1%20%CF%85%CF%80%CE%B5%CF%8D%CE%B8%CF%85%CE%BD%CE%B1%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%AC%CE%BC%CF%85%CE%BD%CE%B1%20%CF%84%CE%BF%CF%85%20%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CF%8D%20&b3=%CE%9B%CE%95%CE%9C%CE%A6%CE%9F%CE%9A%CE%8E%CE%A4%CE%A4%CE%91%CE%A1%CE%91&h4=text%7C%CE%88%CF%87%CE%B5%CE%B9%20%CE%B1%CF%80%CE%BF%CE%BC%CE%BF%CE%BD%CF%89%CE%B8%CE%B5%CE%AF%20%20%CF%83%CE%B5%20%CE%B1%CF%85%CF%84%CF%8C%20%CE%BF%20%CE%B9%CF%8C%CF%82%20%CF%84%CE%BF%CF%85%20AIDS%20&b4=%CE%95%CE%93%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%9F%CE%9D%CE%A9%CE%A4%CE%99%CE%91%CE%99%CE%9F%20%CE%A5%CE%93%CE%A1%CE%9F&h5=text%7C%CE%94%CE%B5%CE%BD%20%CE%BC%CE%B5%CF%84%CE%B1%CE%B4%CE%AF%CE%B4%CE%B5%CF%84%CE%B1%CE%B9%20%CE%BC%CE%B5%20%CE%B1%CF%85%CF%84%CF%8C%20%CE%BF%20%CE%B9%CF%8C%CF%82%20%CF%84%CE%BF%CF%85%20AIDS%20&b5=%CE%9A%CE%9F%CE%A5%CE%9D%CE%9F%CE%A5%CE%A0%CE%99%CE%91&h6=text%7C%CE%88%CF%87%CE%B5%CE%B9%20%CF%80%CF%81%CE%BF%CF%83%CE%B2%CE%BB%CE%B7%CE%B8%CE%B5%CE%AF%20%CE%B1%CF%80%CF%8C%20%20%CF%84%CE%BF%CE%BD%20%CE%B9%CF%8C%20%CF%84%CE%BF%CF%85%20AIDS%20%CE%BA%CE%B1%CE%B9%20%CE%B4%CE%B5%CE%BD%20%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9%20%CF%83%CF%85%CE%BC%CF%80%CF%84%CF%8E%CE%BC%CE%B1%CF%84%CE%B1&b6=%CE%A6%CE%9F%CE%A1%CE%95%CE%91%CE%A3&order=ordered%20like%20listed%20above&feedback=%CE%9C%CF%80%CF%81%CE%AC%CE%B2%CE%BF%2C%20%CF%84%CE%B1%20%CF%80%CE%AE%CE%B3%CE%B5%CF%82%20%CF%84%CE%AD%CE%BB%CE%B5%CE%B9%CE%B1%21",
+	"title": "AIDS -ΚΡΕΜΑΛΑ",
+	"tool": "45",
+	"helptext": "",
+	"tasktext": "Πάτα πάνω στο γράμμα που πιστεύεις πως πρέπει να μπει στη λέξη της κρεμάλας! Φρόντισε το λουλουδάκι να μη χάσει όλα τα πέταλά του!",
+	"formlanguage": "EN",
+	"language": "EN",
+	"parameters": [
+		{
+			"t": "parameter",
+			"value": "DE|EN|ES|FR|GR|HU|IT|PL|PT|CZ|RU|TR|UK|de|en|es|fr|gr|hu|it|pl|pt|cz|ru|tr|uk",
+			"width": "",
+			"height": "",
+			"name": "lang",
+			"label": "%sprache%",
+			"type": "select",
+			"description": ""
+		},
+		{
+			"t": "list",
+			"label": "%suchbegriffundhinweise%",
+			"description": "",
+			"name": "Liste1",
+			"min": "1",
+			"max": 25,
+			"addtext": "Add another element",
+			"children": [
+				{
+					"t": "parameter",
+					"value": "",
+					"width": "",
+					"height": "",
+					"name": "h#",
+					"label": "%hint%",
+					"type": "media",
+					"description": "",
+					"media": "image|audio|text|speech"
+				},
+				{
+					"t": "parameter",
+					"value": "",
+					"width": "",
+					"height": "",
+					"name": "b#",
+					"label": "%suchbegriff% #",
+					"type": "text",
+					"description": ""
+				},
+				{
+					"t": "space",
+					"value": "20"
+				}
+			]
+		},
+		{
+			"t": "parameter",
+			"value": "%zufällige%|%geordnet%",
+			"width": "",
+			"height": "",
+			"name": "order",
+			"label": "%Sortieren%",
+			"type": "select",
+			"description": "%SortierenBeschreibung%"
+		},
+		{
+			"t": "parameter",
+			"value": "%FeedbackValue%",
+			"width": "",
+			"height": "",
+			"name": "feedback",
+			"label": "%Feedback%",
+			"type": "textarea",
+			"description": "%FeedbackBeschreibung%"
+		}
+	],
+	"translation": [
+		{
+			"id": "APP_TITLE",
+			"language": "DE",
+			"value": "Wörterraten"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "EN",
+			"value": "Guess the word"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "DE",
+			"value": "Finde das gesuchte Wort durch Klicken auf die Buchstaben."
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "EN",
+			"value": "Find the word in question by clicking on the letters before you are hanged."
+		},
+		{
+			"id": "nochmal",
+			"language": "DE",
+			"value": "Nächste Runde"
+		},
+		{
+			"id": "nochmal",
+			"language": "EN",
+			"value": "Next round"
+		},
+		{
+			"id": "hint",
+			"language": "DE",
+			"value": "Hinweis"
+		},
+		{
+			"id": "hint",
+			"language": "EN",
+			"value": "Hint"
+		},
+		{
+			"id": "Sortieren",
+			"language": "DE",
+			"value": "Fragen sortieren"
+		},
+		{
+			"id": "Sortieren",
+			"language": "EN",
+			"value": "Sort questions"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "DE",
+			"value": "Die Fragen können wahlweise zufällig oder geordnet gestellt werden."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "EN",
+			"value": "Questions can either be displayed randomly or in order."
+		},
+		{
+			"id": "zufällige",
+			"language": "DE",
+			"value": "zufällige Reihenfolge"
+		},
+		{
+			"id": "zufällige",
+			"language": "EN",
+			"value": "random order"
+		},
+		{
+			"id": "geordnet",
+			"language": "DE",
+			"value": "geordnet wie oben angegeben"
+		},
+		{
+			"id": "geordnet",
+			"language": "EN",
+			"value": "ordered like listed above"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "DE",
+			"value": "Suchbegriff und Hinweise"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "EN",
+			"value": "Searchword and hints"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "DE",
+			"value": "Suchbegriff"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "EN",
+			"value": "Searchword"
+		},
+		{
+			"id": "sprache",
+			"language": "DE",
+			"value": "Welche Tastatur soll eingeblendet werden?"
+		},
+		{
+			"id": "sprache",
+			"language": "EN",
+			"value": "Which keyboard should be used?"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "FR",
+			"value": "Pendu"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "FR",
+			"value": "Trouvez le mot recherché en cliquant sur les lettres avant de finir complètement pendu."
+		},
+		{
+			"id": "nochmal",
+			"language": "FR",
+			"value": "Suivant ?"
+		},
+		{
+			"id": "hint",
+			"language": "FR",
+			"value": "Indice"
+		},
+		{
+			"id": "hint",
+			"language": "IT",
+			"value": "Suggerimento"
+		},
+		{
+			"id": "hint",
+			"language": "RU",
+			"value": "Указание "
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "RM",
+			"value": "Anflar il plaid encuretg enten cliccar sils bustabs avon che ti pendas diltuttafatg."
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "RM",
+			"value": "Um pendiu (hangman)"
+		},
+		{
+			"id": "nochmal",
+			"language": "RM",
+			"value": "Proxima noziun?"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "RM",
+			"value": "Noziun dad encurir ed indezis"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "RM",
+			"value": "Noziun d'encurir"
+		},
+		{
+			"id": "sprache",
+			"language": "RM",
+			"value": "Tgei tastatura duei vegnir mussada?"
+		},
+		{
+			"id": "nochmal",
+			"language": "RO",
+			"value": "Altă noțiune?"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "RO",
+			"value": "Spânzurătoarea"
+		},
+		{
+			"id": "sprache",
+			"language": "RO",
+			"value": "Ce tastatură trebuie inserată?"
+		},
+		{
+			"id": "hint",
+			"language": "RO",
+			"value": "Notificare"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "RO",
+			"value": "Găsește cuvântul căutat prin apăsarea pe litere, înainte sa fii spânzurat."
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "RO",
+			"value": "Noțiune căutare și notificări"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "RU",
+			"value": "Угадывание слов"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "IT",
+			"value": "L'impiccato"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "GL",
+			"value": "Aforcado"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "GL",
+			"value": "Atopa a palabra buscada clicando nas letras antes de morrer aforcado"
+		},
+		{
+			"id": "nochmal",
+			"language": "GL",
+			"value": "Seguinte palabra"
+		},
+		{
+			"id": "hint",
+			"language": "GL",
+			"value": "Pista"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "PL",
+			"value": "Wisielec"
+		},
+		{
+			"id": "sprache",
+			"language": "FR",
+			"value": "Quel clavier voulez-vous utiliser ?"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "RU",
+			"value": "Найдите искомое слово, нажимая на буквы, прежде чем будете полностью &quot;повешены&quot;."
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "PL",
+			"value": "Znajdź szukane słowo klikając litery zanim całkowicie Cię nie powieszą."
+		},
+		{
+			"id": "nochmal",
+			"language": "PL",
+			"value": "Następna runda."
+		},
+		{
+			"id": "hint",
+			"language": "PL",
+			"value": "Wskazówka."
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "PL",
+			"value": "Szukane słowa i wsakzówki"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "PL",
+			"value": "Szukane słowo"
+		},
+		{
+			"id": "sprache",
+			"language": "PL",
+			"value": "Rodzaj klawiatury."
+		},
+		{
+			"id": "beschreibung",
+			"language": "PL",
+			"value": "Nie wpisuj żadnych znaków specjalnych lub cyfr. Wskazówki będą się ukazywały gdy gracz będzie wpisywał złe litery (których nie zawiera poszukiwane słowo). Można pisać do 10 wskazówek oddzielonych średnikiem (;). Np.: jeden; dwa; trzy itd."
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "ET",
+			"value": "Poomine"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "FR",
+			"value": "Mot recherché"
+		},
+		{
+			"id": "Sortieren",
+			"language": "FR",
+			"value": "Trier les questions"
+		},
+		{
+			"id": "Sortieren",
+			"language": "IT",
+			"value": "Ordinare le domande"
+		},
+		{
+			"id": "Sortieren",
+			"language": "RU",
+			"value": "Сортировать вопросы "
+		},
+		{
+			"id": "Sortieren",
+			"language": "RM",
+			"value": "Zavrar las damondas"
+		},
+		{
+			"id": "Sortieren",
+			"language": "RO",
+			"value": "Sortează intrebări"
+		},
+		{
+			"id": "Sortieren",
+			"language": "PL",
+			"value": "Sortowanie pytań"
+		},
+		{
+			"id": "Sortieren",
+			"language": "ET",
+			"value": "Sorteeri küsimused"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "RM",
+			"value": "Las damondas san vegnir ordinadas tenor giavisch ni tenor casualitad."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "RO",
+			"value": "Întrebările pot fi puse la alegere aleator sau în ordine."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "PL",
+			"value": "Pytania mogą być wyświetlane losowo lub w kolejności."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "ET",
+			"value": "Küsimusi võib esitada juhuslikus või etteantud järjekoras.\n"
+		},
+		{
+			"id": "zufällige",
+			"language": "FR",
+			"value": "Ordre aléatoire"
+		},
+		{
+			"id": "zufällige",
+			"language": "IT",
+			"value": "Sequenza casuale"
+		},
+		{
+			"id": "zufällige",
+			"language": "RU",
+			"value": "случайный порядок "
+		},
+		{
+			"id": "zufällige",
+			"language": "RM",
+			"value": "ordinau tenor casualitad"
+		},
+		{
+			"id": "zufällige",
+			"language": "RO",
+			"value": "Ordine aleatoare"
+		},
+		{
+			"id": "zufällige",
+			"language": "PL",
+			"value": "przypadkowa kolejność"
+		},
+		{
+			"id": "zufällige",
+			"language": "ET",
+			"value": "juhuslik järjekord"
+		},
+		{
+			"id": "geordnet",
+			"language": "FR",
+			"value": "Mis dans l'ordre comme ci-dessus"
+		},
+		{
+			"id": "geordnet",
+			"language": "IT",
+			"value": "nell'ordine di cui sopra"
+		},
+		{
+			"id": "geordnet",
+			"language": "RU",
+			"value": "расположено как задано "
+		},
+		{
+			"id": "geordnet",
+			"language": "RM",
+			"value": "ordinau sco indicau sura"
+		},
+		{
+			"id": "geordnet",
+			"language": "RO",
+			"value": "Ordonat cum e afișat mai sus"
+		},
+		{
+			"id": "geordnet",
+			"language": "PL",
+			"value": "uporządkowane jak wyżej "
+		},
+		{
+			"id": "geordnet",
+			"language": "ET",
+			"value": "järjestatakse nagu praegu ülevalpool"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "BG",
+			"value": "Бесеница"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "BG",
+			"value": "Отгатни надписа буква по буква, преди да бъдеш обесен. "
+		},
+		{
+			"id": "nochmal",
+			"language": "BG",
+			"value": "Следващ рунд"
+		},
+		{
+			"id": "Sortieren",
+			"language": "BG",
+			"value": "Подреждане на въпросите"
+		},
+		{
+			"id": "hint",
+			"language": "BG",
+			"value": "Подсказка"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "BG",
+			"value": "Въпросите могат да бъдат показани на случаен принцип или в определен ред."
+		},
+		{
+			"id": "zufällige",
+			"language": "BG",
+			"value": "произволен ред"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "BG",
+			"value": "Думотърсач"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "BG",
+			"value": "Търси дума и съвети"
+		},
+		{
+			"id": "geordnet",
+			"language": "BG",
+			"value": "подреждане като изброените по-горе"
+		},
+		{
+			"id": "sprache",
+			"language": "BG",
+			"value": "Коя клавиатура трябва да се използва?"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "UK",
+			"value": "Вгадай слово"
+		},
+		{
+			"id": "hint",
+			"language": "UK",
+			"value": "Підказка"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "UK",
+			"value": "Потрібно відкрити слово за підказкою, клацаючи на буквах"
+		},
+		{
+			"id": "Sortieren",
+			"language": "UK",
+			"value": "Сортувати питання"
+		},
+		{
+			"id": "zufällige",
+			"language": "UK",
+			"value": "випадковий порядок"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "UK",
+			"value": "Пошукові слова та підказки"
+		},
+		{
+			"id": "nochmal",
+			"language": "UK",
+			"value": "Наступний етап"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "UK",
+			"value": "Питання можна показувати впорядковано чи випадково"
+		},
+		{
+			"id": "sprache",
+			"language": "UK",
+			"value": "Яку клавіатуру використовувати?"
+		},
+		{
+			"id": "geordnet",
+			"language": "UK",
+			"value": "порядок, показаний вище"
+		},
+		{
+			"id": "hinweise",
+			"language": "UK",
+			"value": "Підказки"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "UK",
+			"value": "Пошукові слова"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "TR",
+			"value": "Kelime bulmaca"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "TR",
+			"value": "Tamamen asılmadan harflere tıklayarak aranan kelimeyi bulmalısın."
+		},
+		{
+			"id": "nochmal",
+			"language": "TR",
+			"value": "Sonraki kelime"
+		},
+		{
+			"id": "hint",
+			"language": "TR",
+			"value": "İpucu"
+		},
+		{
+			"id": "Sortieren",
+			"language": "TR",
+			"value": "Soruları guruplandır"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "TR",
+			"value": "Sorular istersen rastgele, istersen belirlenen sıraya göre gösterilmektedir."
+		},
+		{
+			"id": "zufällige",
+			"language": "TR",
+			"value": "Rastgele sıralama"
+		},
+		{
+			"id": "geordnet",
+			"language": "TR",
+			"value": "Yukarıda gösterilene uygun sıralama"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "TR",
+			"value": "Aranan kelime ve ipuçları"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "TR",
+			"value": "Aranan kelime"
+		},
+		{
+			"id": "sprache",
+			"language": "TR",
+			"value": "Hangi klavye gösterilsin?"
+		},
+		{
+			"id": "nochmal",
+			"language": "RU",
+			"value": "Следующий уровень"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "GE",
+			"value": "ჯალათი"
+		},
+		{
+			"id": "win",
+			"language": "GE",
+			"value": "თქვენ გადარჩით!"
+		},
+		{
+			"id": "nochmal",
+			"language": "GE",
+			"value": "შემდეგი რაუნდი"
+		},
+		{
+			"id": "Sortieren",
+			"language": "GE",
+			"value": "კითხვების დახარისხება"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "GE",
+			"value": "შეკითხვები შეიძლება დაისვას ან მოცემული ან შემთხვევითი თანმიმდევრობით."
+		},
+		{
+			"id": "zufällige",
+			"language": "GE",
+			"value": "შემთხვევითი თანმიმდევრობა"
+		},
+		{
+			"id": "geordnet",
+			"language": "GE",
+			"value": "მოცემული თანმიმდევრობა"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "GE",
+			"value": "ძებნის და მინიშნების კრიტერიუმები"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "GE",
+			"value": "ვიდრე საბოლოოდ ჩამოგაღრჩობდნენ დაწერეთ საჭირო სიტყვა   ასოების არჩევით მოცემული მინიშნების შესაბამისად."
+		},
+		{
+			"id": "hint",
+			"language": "GE",
+			"value": "მინიშნება"
+		},
+		{
+			"id": "sprache",
+			"language": "GE",
+			"value": "რა უნდა აისახოს კლავიატურაზე?"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "GE",
+			"value": "საძიებელი სიტყვა"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "IT",
+			"value": " Indovina la parola ricercata cliccando sulle lettere prima di venire impiccato."
+		},
+		{
+			"id": "nochmal",
+			"language": "IT",
+			"value": "Prossimo turno"
+		},
+		{
+			"id": "hint",
+			"language": "ES",
+			"value": "Pista"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "RU",
+			"value": "Вопросы могут показываться в постоянном или случайном порядке."
+		},
+		{
+			"id": "zufällige",
+			"language": "ES",
+			"value": "Orden aleatorio"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "BS",
+			"value": "Pronađite traženu riječ, klikajući na slova, prije nego budete potpuno obješeni."
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "BS",
+			"value": "Vješala"
+		},
+		{
+			"id": "nochmal",
+			"language": "BS",
+			"value": "Sljedeći runda"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "BS",
+			"value": "Pitanja mogu biti prikazana po redu ili slučajnim redoslijedom."
+		},
+		{
+			"id": "Sortieren",
+			"language": "BS",
+			"value": "Sortirajte pitanja"
+		},
+		{
+			"id": "hint",
+			"language": "BS",
+			"value": "Pomoć"
+		},
+		{
+			"id": "zufällige",
+			"language": "BS",
+			"value": "Slučajni redoslijed"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "BS",
+			"value": "Riječ pretrage i pomoć"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "BS",
+			"value": "Riječ pretrage"
+		},
+		{
+			"id": "sprache",
+			"language": "BS",
+			"value": "Koja tastatura će biti korištena?"
+		},
+		{
+			"id": "geordnet",
+			"language": "BS",
+			"value": "Raspored po gornjem redu"
+		},
+		{
+			"id": "nochmal",
+			"language": "ET",
+			"value": "Järgmine ring"
+		},
+		{
+			"id": "hint",
+			"language": "ET",
+			"value": "Juhis"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "ET",
+			"value": "Otsitermin ja juhised"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "ET",
+			"value": "Otsitermin"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "NL",
+			"value": "Galgje"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "NL",
+			"value": "Vind het gezochte woord, door te klikken op de letters voor u helemaal aan de galg hangt."
+		},
+		{
+			"id": "nochmal",
+			"language": "NL",
+			"value": "Volgende ronde"
+		},
+		{
+			"id": "hint",
+			"language": "NL",
+			"value": "Tip"
+		},
+		{
+			"id": "Sortieren",
+			"language": "NL",
+			"value": "Vragen rangschikken"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "NL",
+			"value": "De vragen kunnen willekeurige of in volgorde gesteld worden."
+		},
+		{
+			"id": "zufällige",
+			"language": "NL",
+			"value": "Willekeurige volgorde"
+		},
+		{
+			"id": "geordnet",
+			"language": "NL",
+			"value": "Gerangschikt zoals hierboven"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "NL",
+			"value": "Zoektermen en tips"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "NL",
+			"value": "Zoektermen"
+		},
+		{
+			"id": "sprache",
+			"language": "NL",
+			"value": "Welk toetsenbord moet worden weergegeven?"
+		},
+		{
+			"id": "beschreibung",
+			"language": "NL",
+			"value": "Gebruik GEEN speciale tekens of cijfers in het trefwoord. Het Duitse umlaut is toegestaan. Het trefwoord wordt anders geweigerd. Voer maximaal 10 tips toe. De tips worden weergegeven wanneer u een verkeerde letter (die geen deel uitmaakt van de trefwoord) opgeeft en zullen de speler ondersteunen bij de zoektocht. Scheid de tips door puntkomma - vb. één; twee; drie; etc."
+		},
+		{
+			"id": "Sortieren",
+			"language": "SV",
+			"value": "Sortera frågor"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "FR",
+			"value": "Les questions peuvent être affichées aléatoirement ou dans l'ordre."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "IT",
+			"value": "Le domande possono essere poste casualmente o in un ordine prestabilito."
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "BY",
+			"value": "Віселіца"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "BY",
+			"value": "Адгадайце слова, націскаючы на літары, да таго, як будзеце &quot;павешаныя&quot;."
+		},
+		{
+			"id": "nochmal",
+			"language": "BY",
+			"value": "Наступны раўнд"
+		},
+		{
+			"id": "Sortieren",
+			"language": "BY",
+			"value": "Сартаваць пытанні"
+		},
+		{
+			"id": "hint",
+			"language": "BY",
+			"value": "Падказка"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "BY",
+			"value": "Пытанні можна паказваць у выпадковым ці зададзеным парадку."
+		},
+		{
+			"id": "zufällige",
+			"language": "BY",
+			"value": "выпадковая паслядоўнасць"
+		},
+		{
+			"id": "geordnet",
+			"language": "BY",
+			"value": "як зададзена вышэй"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "BY",
+			"value": "Слова для пошуку і падказкі"
+		},
+		{
+			"id": "sprache",
+			"language": "BY",
+			"value": "Якая клавіатура павінна быць выкарыстана?"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "BY",
+			"value": "Пошукавае слова"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "HU",
+			"value": "Szavak és sziromlevelek"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "HU",
+			"value": "Találd ki az elrejtett szó betűit, mielőtt a virág levelei lehullanak!"
+		},
+		{
+			"id": "hint",
+			"language": "HU",
+			"value": "Súgószó"
+		},
+		{
+			"id": "Sortieren",
+			"language": "HU",
+			"value": "Kérdések válogatása"
+		},
+		{
+			"id": "nochmal",
+			"language": "HU",
+			"value": "Következő kör."
+		},
+		{
+			"id": "zufällige",
+			"language": "HU",
+			"value": "véletlenszerű sorrend"
+		},
+		{
+			"id": "geordnet",
+			"language": "HU",
+			"value": "a fent megadott sorrendbe rendezve"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "HU",
+			"value": "A feladvány és a sógószavak"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "HU",
+			"value": "A feladvány"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "HU",
+			"value": "Lehetőség van a kérdések véletlenszerű, vagy sorrendben történő feltevésére."
+		},
+		{
+			"id": "sprache",
+			"language": "HU",
+			"value": "Melyik billentyűzet jelenjen meg?"
+		},
+		{
+			"id": "hint",
+			"language": "PT",
+			"value": "dica"
+		},
+		{
+			"id": "Sortieren",
+			"language": "PT",
+			"value": "Classificar perguntas"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "PT",
+			"value": "&amp;quot;As questões podem ser exibidas aleatoriamente ou em ordem.&amp;quot;"
+		},
+		{
+			"id": "zufällige",
+			"language": "PT",
+			"value": "forma aleatória"
+		},
+		{
+			"id": "geordnet",
+			"language": "PT",
+			"value": "ordenada como assinalado em cima"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "FR",
+			"value": "Mots recherchés et indices"
+		},
+		{
+			"id": "Feedback",
+			"language": "DE",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "DE",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "EN",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "EN",
+			"value": "Feedback"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "EN",
+			"value": "Provide a feedback text which is displayed when all questions were answered correctly."
+		},
+		{
+			"id": "Feedback",
+			"language": "FR",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "FR",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "IT",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "IT",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "RU",
+			"value": "Обратная связь"
+		},
+		{
+			"id": "Feedback",
+			"language": "RO",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "RO",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "PL",
+			"value": "Informacja zwrotna."
+		},
+		{
+			"id": "Feedback",
+			"language": "RM",
+			"value": "Resun"
+		},
+		{
+			"id": "Feedback",
+			"language": "ET",
+			"value": "tagasiside"
+		},
+		{
+			"id": "Feedback",
+			"language": "BG",
+			"value": "Обратна връзка"
+		},
+		{
+			"id": "Feedback",
+			"language": "UK",
+			"value": "Зворотній зв'язок"
+		},
+		{
+			"id": "Feedback",
+			"language": "TR",
+			"value": "Geri dönüşüm"
+		},
+		{
+			"id": "Feedback",
+			"language": "GE",
+			"value": "უკუკავშირი"
+		},
+		{
+			"id": "Feedback",
+			"language": "BS",
+			"value": "Feedback - napomena"
+		},
+		{
+			"id": "Feedback",
+			"language": "BS",
+			"value": "Feedback - napomena"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "BS",
+			"value": "Unesite feedback tekst koji će se pojaviti nakon što sva na sva pitanja budu pravilno odgovoreno."
+		},
+		{
+			"id": "Feedback",
+			"language": "PT",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "PT",
+			"value": "Feedback"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "PT",
+			"value": "&quot;Fornecer  texto de feedback que é exibido quando todas as perguntas forem respondidas correctamente.&quot;"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "NL",
+			"value": "Geef telkens één vraag en tot 4 antwoordmogelijkheden op. Indien gewenst kan er feedback worden toegevoegd bij elk antwoord."
+		},
+		{
+			"id": "Feedback",
+			"language": "NL",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "NL",
+			"value": "Feedback"
+		},
+		{
+			"id": "Feedback",
+			"language": "GR",
+			"value": "Μήνυμα επιβράβευσης"
+		},
+		{
+			"id": "Feedback",
+			"language": "BY",
+			"value": "Зваротная сувязь"
+		},
+		{
+			"id": "Feedback",
+			"language": "HU",
+			"value": "Visszajelzés"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "DE",
+			"value": "Geben Sie einen Text an, der eingeblendet wird, wenn die richtige Lösung gefunden wurde."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "EN",
+			"value": "Provide a feedback text which will be displayed when the solution is found."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "FR",
+			"value": "Saisissez le texte qui s'affichera lorsque la bonne solution aura été trouvée."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "IT",
+			"value": "Indica un testo che verrà inserito quando verrà trovata la soluzione corretta."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "RU",
+			"value": "Задайте текст, который будет высвечиваться, если найдено правильное решение. "
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "RM",
+			"value": "Endatescha in text che vegn mussaus sche la sligiaziun ei correcta."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "RO",
+			"value": "Introduceți un text care este vizibil atunci când soluția este corectă.  "
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "PL",
+			"value": "Podaj tekst, który będzie wyświetlany, gdy zostanie znalezione rozwiązanie."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "ET",
+			"value": "Sisestage tekst mis ilmub, kui õige lahendus leitakse."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "BG",
+			"value": "Осигурете текстова обратна връзка, която се показва, когато се намери решение."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "UK",
+			"value": "Напишіть текст зворотнього зв'язку, який з'явиться, коли правильне рішення буде знайдено."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "TR",
+			"value": "Doğru çözüldüğünde gösterilmesini istediğiniz bir metni girin"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "GE",
+			"value": "შეიყვანეთ ტექსტი, რომელიც გამოჩნდება სწორი პასუხის შემთხვევაში"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "BS",
+			"value": "Unesite feedback tekst koji će biti prikazan kada bude pronađeno konačno rješenje."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "NL",
+			"value": "Voer een tekst in die wordt weergegeven wanneer de juiste oplossing is gevonden."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "PT",
+			"value": "Fornecer um texto de feedback que é exibido quando a solução é encontrada."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "BY",
+			"value": "Напішыце тэкст, які будзе паказвацца пры правільным выкананні практыкавання."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "HU",
+			"value": "Adjon meg egy szöveget, ami akkor jelenik meg, ha megtalálják a helyes megoldást."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "DE",
+			"value": "Prima, du hast alle Fragen richtig gelöst."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "EN",
+			"value": "Great, you have answered all the questions correctly!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "FR",
+			"value": "Bravo ! Vous avez répondu correctement à toutes les questions."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "RU",
+			"value": "Молодец, ты решил все вопросы верно! "
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "IT",
+			"value": "Fantastico! Hai risposto correttamente a tutte le domande."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "RM",
+			"value": "Bravo, ti has sligiau tut endretg!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "RO",
+			"value": "Super, ai răspuns corect la toate întrebările!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "GL",
+			"value": "Moi ben, contestaches correctamente a todas!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "PL",
+			"value": "Świetnie, odpowiedziałeś na wszystkie pytania prawidłowo!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "ET",
+			"value": "Tubli, sa vastasid kõigile küsimustele õigesti!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "ES",
+			"value": "¡Muy bien! ¡Perfecto!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "BG",
+			"value": "Страхотно! Ти отговори вярно на всички въпроси!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "UK",
+			"value": "Чудово, правильне рішення знайдено!"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "TR",
+			"value": "Maşaallah! Tüm soruları doğru cevaplandırdın."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "GE",
+			"value": "კარგია, თქვენ ყველა კითხვას სწორად უპასუხეთ!."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "BS",
+			"value": "Odlično, sva ste pitanja točno odgovorili"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "PT",
+			"value": "&quot;Óptimo, respondeu a todas as perguntas correctamente!&quot;"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "NL",
+			"value": "Prima, u heeft alle vragen juist opgelost."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "HU",
+			"value": "Nagyszerű! Minden kérdést jól megválaszoltál."
+		},
+		{
+			"id": "hint",
+			"language": "RM",
+			"value": "Indezi"
+		},
+		{
+			"id": "beschreibung",
+			"language": "EN",
+			"value": "Here you receive some hints!"
+		},
+		{
+			"id": "beschreibung",
+			"language": "FR",
+			"value": "Faire glisser ici la solution"
+		},
+		{
+			"id": "beschreibung",
+			"language": "IT",
+			"value": "Sposta qui la soluzione"
+		},
+		{
+			"id": "beschreibung",
+			"language": "RM",
+			"value": "Ti has retschiert entgins indezis!"
+		},
+		{
+			"id": "beschreibung",
+			"language": "RO",
+			"value": "Aici poți găsi câteva indicații!!"
+		},
+		{
+			"id": "beschreibung",
+			"language": "BG",
+			"value": "Тук ще получиш няколко съвета!"
+		},
+		{
+			"id": "beschreibung",
+			"language": "ET",
+			"value": "Siia tulevad mõned vihjed!"
+		},
+		{
+			"id": "beschreibung",
+			"language": "BS",
+			"value": "Ovdje dobijate male savjete"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "EN",
+			"value": "Here you receive some hints!"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "FR",
+			"value": "Faire glisser ici la solution"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "IT",
+			"value": "Sposta qui la soluzione"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "RM",
+			"value": "Ti has retschiert entgins indezis!"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "RO",
+			"value": "Aici poți găsi câteva indicații!!"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "PL",
+			"value": "Nie wpisuj żadnych znaków specjalnych lub cyfr. Wskazówki będą się ukazywały gdy gracz będzie wpisywał złe litery (których nie zawiera poszukiwane słowo). Można pisać do 10 wskazówek oddzielonych średnikiem (;). Np.: jeden; dwa; trzy itd."
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "BG",
+			"value": "Тук ще получиш няколко съвета!"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "ET",
+			"value": "Siia tulevad mõned vihjed!"
+		},
+		{
+			"id": "FragenBeschreibung",
+			"language": "BS",
+			"value": "Ovdje dobijate male savjete"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "ES",
+			"value": "Ahorcado"
+		},
+		{
+			"id": "Feedback",
+			"language": "ES",
+			"value": "Respuesta"
+		},
+		{
+			"id": "sprache",
+			"language": "IT",
+			"value": "Quale tasto della tastiera dovrebbe essere visualizzato?"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "IT",
+			"value": "Parola chiave"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "IT",
+			"value": "Durata e annunci"
+		},
+		{
+			"id": "Sortieren",
+			"language": "ES",
+			"value": "Ordenar preguntas"
+		},
+		{
+			"id": "hint",
+			"language": "CZ",
+			"value": "Náznak"
+		},
+		{
+			"id": "nochmal",
+			"language": "CZ",
+			"value": "Další kolo"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "CZ",
+			"value": "Šibenice"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "CZ",
+			"value": "Vložte text, který se zobrazí po správném vyřešení úlohy."
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "CZ",
+			"value": "Otázky mohou mít pevně dané nebo náhodné pořadí."
+		},
+		{
+			"id": "Sortieren",
+			"language": "CZ",
+			"value": "Roztřídit otázky"
+		},
+		{
+			"id": "Feedback",
+			"language": "CZ",
+			"value": "Zpětná vazba"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "CZ",
+			"value": "Skvěle, vše je zodpovězeno správně!"
+		},
+		{
+			"id": "zufällige",
+			"language": "CZ",
+			"value": "Náhodné řazení"
+		},
+		{
+			"id": "geordnet",
+			"language": "CZ",
+			"value": "Řadit jak je uvedeno výše"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "CZ",
+			"value": "Klíčové slovo"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "CZ",
+			"value": "Klíčové slova a nápověda"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "CZ",
+			"value": "Zachraňte se nalezením klíčového slova zaklikáváním jednotlivých písmen, dokud nebudete oběšeni."
+		},
+		{
+			"id": "sprache",
+			"language": "CZ",
+			"value": "Která klávesnice má být zobrazena?"
+		},
+		{
+			"id": "Sortieren",
+			"language": "GL",
+			"value": "Ordenar as preguntas"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "ES",
+			"value": "¿Qué palabra estamos buscando? Haz clic en las letras para encontrarla."
+		},
+		{
+			"id": "nochmal",
+			"language": "ES",
+			"value": "¡Siguiente palabra!"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "ES",
+			"value": "Las preguntas pueden ser presentadas al azar o en el orden predeterminado."
+		},
+		{
+			"id": "geordnet",
+			"language": "ES",
+			"value": "Orden predeterminado."
+		},
+		{
+			"id": "sprache",
+			"language": "ES",
+			"value": "¿Qué teclado se debe mostrar?"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "ES",
+			"value": "¿Qué texto se debe mostrar si la respuesta es correcta?"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "ES",
+			"value": "Palabra buscada y ayuda"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "ES",
+			"value": "Palabra buscada"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "RO",
+			"value": "Noțiune căutare"
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "RU",
+			"value": "Поисковый запрос и примечания"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "RU",
+			"value": "Поисковый запрос"
+		},
+		{
+			"id": "sprache",
+			"language": "RU",
+			"value": "Какая клавиатура должна отображаться?"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "LT",
+			"value": "Atspėti žodį"
+		},
+		{
+			"id": "hint",
+			"language": "LT",
+			"value": "Užuomina"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "LT",
+			"value": "Klausimai gali būti rodomi atsitiktine arba numatyta tvarka"
+		},
+		{
+			"id": "geordnet",
+			"language": "LT",
+			"value": "aukščiau numatyta tvarka"
+		},
+		{
+			"id": "Sortieren",
+			"language": "LT",
+			"value": "Rūšiuoti klausimus"
+		},
+		{
+			"id": "nochmal",
+			"language": "LT",
+			"value": "Sekantis raundas"
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "LT",
+			"value": "Atspėti ieškomą žodį spėjant raides ir turint ribotą skaičių raidžių spėjimų. Tai tradicinis žaidimas &quot;Kartuvės&quot;, tik šios pakeistos į žiedlapius."
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "LT",
+			"value": "Ieškomas žodis ir užuominos"
+		},
+		{
+			"id": "sprache",
+			"language": "LT",
+			"value": "Kokia klaviatūra turi būti naudojama?"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "LT",
+			"value": "Ieškomas žodis"
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "LT",
+			"value": "Parašykite grįžtamojo ryšio tekstą, kuris bus rodomas atspėjus žodį."
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "LT",
+			"value": "Puiku, atspėjai!"
+		},
+		{
+			"id": "zufällige",
+			"language": "LT",
+			"value": "atsitiktine tvarka"
+		},
+		{
+			"id": "Feedback",
+			"language": "LT",
+			"value": "Grįžtamasis ryšys"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "PT",
+			"value": "termo de pesquisa"
+		},
+		{
+			"id": "APP_TITLE",
+			"language": "GR",
+			"value": "Βρες την λέξη - Κρεμάλα"
+		},
+		{
+			"id": "FeedbackValue",
+			"language": "GR",
+			"value": "Τέλεια, απάντησες σε όλα σωστά."
+		},
+		{
+			"id": "nochmal",
+			"language": "GR",
+			"value": "Επόμενος γύρος"
+		},
+		{
+			"id": "hint",
+			"language": "GR",
+			"value": "Στοιχείο"
+		},
+		{
+			"id": "Sortieren",
+			"language": "GR",
+			"value": "Ταξινόμηση ερωτήσεων"
+		},
+		{
+			"id": "geordnet",
+			"language": "GR",
+			"value": "ταξινόμηση όπως δηλώθηκε παραπάνω"
+		},
+		{
+			"id": "zufällige",
+			"language": "GR",
+			"value": "τυχαία σειρά"
+		},
+		{
+			"id": "SortierenBeschreibung",
+			"language": "GR",
+			"value": "Οι ερωτήσεις μπορούν να γίνουν τυχαία ή με σειρά."
+		},
+		{
+			"id": "FeedbackBeschreibung",
+			"language": "GR",
+			"value": "Δώστε ένα κείμενο που θα εμφανιστεί όταν βρεθεί η σωστή λύση."
+		},
+		{
+			"id": "APP_DESCRIPTION",
+			"language": "GR",
+			"value": "Βρείτε τη λέξη που ψάχνετε κάνοντας κλικ στα γράμματα πριν &quot;κρεμαστείτε&quot; τελείως."
+		},
+		{
+			"id": "suchbegriffundhinweise",
+			"language": "GR",
+			"value": "Όρος αναζήτησης και σημειώσεις"
+		},
+		{
+			"id": "suchbegriff",
+			"language": "GR",
+			"value": "Όρος αναζήτησης"
+		},
+		{
+			"id": "sprache",
+			"language": "GR",
+			"value": "Ποιο πληκτρολόγιο πρέπει να εμφανίζεται;"
+		}
+	],
+	"path": "https://learningapps.org/tools/45/29/",
+	"fromCache": 1,
+	"version": "29"
+};

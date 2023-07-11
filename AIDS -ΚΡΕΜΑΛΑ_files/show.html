@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://learningapps.org/tools/45/29/watch?id=panssaz1c20 -->
+<html lang="en" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.ui-draggable {-ms-touch-action:none;}</style>
+    <link href="./css" rel="stylesheet">    <!-- load AppClient framework with jquery -->
+    
+<!-- Matomo -->
+<script async="" src="./matomo.js"></script><script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.learningapps.org/";
+    _paq.push(["setTrackerUrl", u+"matomo.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.async=true; g.src=u+"matomo.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script><script>/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+
+;// CONCATENATED MODULE: ../core/dist/flash-identifiers.js
+const FLASH_MIMETYPE = "application/x-shockwave-flash";
+const FUTURESPLASH_MIMETYPE = "application/futuresplash";
+const FLASH7_AND_8_MIMETYPE = "application/x-shockwave-flash2-preview";
+const FLASH_MOVIE_MIMETYPE = "application/vnd.adobe.flash.movie";
+const FLASH_ACTIVEX_CLASSID = "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000";
+
+;// CONCATENATED MODULE: ../core/dist/plugin-polyfill.js
+
+/**
+ * Replacement object for `MimeTypeArray` that lets us install new fake mime
+ * types.
+ *
+ * Unlike plugins we can at least enumerate mime types in Firefox, so we don't
+ * lose data.
+ *
+ * We also expose a method called `install` which adds a new plugin. This is
+ * used to falsify Flash detection. If the existing `navigator.mimeTypes` has an
+ * `install` method, you should not use `RuffleMimeTypeArray` as some other
+ * plugin emulator is already present.
+ */
+class RuffleMimeTypeArray {
+    constructor(mimeTypes) {
+        this.__mimeTypes = [];
+        this.__namedMimeTypes = {};
+        if (mimeTypes) {
+            for (let i = 0; i < mimeTypes.length; i++) {
+                this.install(mimeTypes[i]);
+            }
+        }
+    }
+    /**
+     * Install a MIME Type into the array.
+     *
+     * @param mimeType The mime type to install
+     */
+    install(mimeType) {
+        const index = this.__mimeTypes.length;
+        this.__mimeTypes.push(mimeType);
+        this.__namedMimeTypes[mimeType.type] = mimeType;
+        this[mimeType.type] = mimeType;
+        this[index] = mimeType;
+    }
+    item(index) {
+        // This behavior is done to emulate a 32-bit uint,
+        // which browsers use.
+        return this.__mimeTypes[index >>> 0];
+    }
+    namedItem(name) {
+        return this.__namedMimeTypes[name];
+    }
+    get length() {
+        return this.__mimeTypes.length;
+    }
+    [Symbol.iterator]() {
+        return this.__mimeTypes[Symbol.iterator]();
+    }
+}
+/**
+ * Equivalent object to `Plugin` that allows us to falsify plugins.
+ */
+class RufflePlugin extends RuffleMimeTypeArray {
+    constructor(name, description, filename) {
+        super();
+        this.name = name;
+        this.description = description;
+        this.filename = filename;
+    }
+}
+/**
+ * Replacement object for `PluginArray` that lets us install new fake plugins.
+ *
+ * This object needs to wrap the native plugin array, since the user might have
+ * actual plugins installed. Firefox doesn't let us enumerate the array, though,
+ * which has some consequences. Namely, we can't actually perfectly wrap the
+ * native plugin array, at least unless there's some secret "unresolved object
+ * property name handler" that I've never known before in JS...
+ *
+ * We can still wrap `namedItem` perfectly at least.
+ *
+ * We also expose a method called `install` which adds a new plugin. This is
+ * used to falsify Flash detection. If the existing `navigator.plugins` has an
+ * `install` method, you should not use `RufflePluginArray` as some other plugin
+ * emulator is already present.
+ */
+class RufflePluginArray {
+    constructor(plugins) {
+        this.__plugins = [];
+        this.__namedPlugins = {};
+        for (let i = 0; i < plugins.length; i++) {
+            this.install(plugins[i]);
+        }
+    }
+    install(plugin) {
+        const index = this.__plugins.length;
+        this.__plugins.push(plugin);
+        this.__namedPlugins[plugin.name] = plugin;
+        this[plugin.name] = plugin;
+        this[index] = plugin;
+    }
+    item(index) {
+        // This behavior is done to emulate a 32-bit uint,
+        // which browsers use. Cloudflare's anti-bot
+        // checks rely on this.
+        return this.__plugins[index >>> 0];
+    }
+    namedItem(name) {
+        return this.__namedPlugins[name];
+    }
+    refresh() {
+        // Nothing to do, we just need to define the method.
+    }
+    [Symbol.iterator]() {
+        return this.__plugins[Symbol.iterator]();
+    }
+    get length() {
+        return this.__plugins.length;
+    }
+}
+/**
+ * A fake plugin designed to trigger Flash detection scripts.
+ */
+const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js");
+/**
+ * A fake plugin designed to allow early detection of if the Ruffle extension is in use.
+ */
+const RUFFLE_EXTENSION = new RufflePlugin("Ruffle Extension", "Ruffle Extension", "ruffle.js");
+FLASH_PLUGIN.install({
+    type: FUTURESPLASH_MIMETYPE,
+    description: "Shockwave Flash",
+    suffixes: "spl",
+    enabledPlugin: FLASH_PLUGIN,
+});
+FLASH_PLUGIN.install({
+    type: FLASH_MIMETYPE,
+    description: "Shockwave Flash",
+    suffixes: "swf",
+    enabledPlugin: FLASH_PLUGIN,
+});
+FLASH_PLUGIN.install({
+    type: FLASH7_AND_8_MIMETYPE,
+    description: "Shockwave Flash",
+    suffixes: "swf",
+    enabledPlugin: FLASH_PLUGIN,
+});
+FLASH_PLUGIN.install({
+    type: FLASH_MOVIE_MIMETYPE,
+    description: "Shockwave Flash",
+    suffixes: "swf",
+    enabledPlugin: FLASH_PLUGIN,
+});
+RUFFLE_EXTENSION.install({
+    type: "",
+    description: "Ruffle Detection",
+    suffixes: "",
+    enabledPlugin: RUFFLE_EXTENSION,
+});
+/**
+ * Install a fake plugin such that detectors will see it in `navigator.plugins`.
+ *
+ * This function takes care to check if the existing implementation of
+ * `navigator.plugins` already accepts fake plugin entries. If so, it will use
+ * that version of the plugin array. This allows the plugin polyfill to compose
+ * across multiple plugin emulators with the first emulator's polyfill winning.
+ *
+ * @param plugin The plugin to install
+ */
+function installPlugin(plugin) {
+    if (!("install" in navigator.plugins) || !navigator.plugins["install"]) {
+        Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: false,
+        });
+    }
+    const plugins = navigator.plugins;
+    plugins.install(plugin);
+    if (plugin.length > 0 &&
+        (!("install" in navigator.mimeTypes) || !navigator.mimeTypes["install"])) {
+        Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: false,
+        });
+    }
+    const mimeTypes = navigator.mimeTypes;
+    for (let i = 0; i < plugin.length; i += 1) {
+        mimeTypes.install(plugin[i]);
+    }
+}
+
+;// CONCATENATED MODULE: ./src/plugin-polyfill.ts
+// This file is compiled and then injected into content.ts's compiled form.
+
+installPlugin(FLASH_PLUGIN);
+installPlugin(RUFFLE_EXTENSION);
+
+/******/ })()
+;</script><script charset="utf-8" src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=43408471881"></script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript" src="./data"></script>
+<script type="text/javascript" src="./AppClientServer.js"></script><link type="text/css" rel="stylesheet" href="./LearningApps.css"><link type="text/css" rel="stylesheet" href="./bootstrap.css">
+<script type="text/javascript">/* <![CDATA[ */
+ var AppID = "panssaz1c20";
+ var AppClientLanguage = "EN";
+ var AppClient = new AppClientClass(AppID,false,0);
+/* ]]> */
+</script>
+
+    <!-- load project files -->
+    <script src="./script.js" type="text/javascript"></script>
+    <link href="./style(1).css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="disable-user-select" style="overflow-wrap: break-word;" data-new-gr-c-s-check-loaded="14.1114.0" data-gr-ext-installed="">
+    <div id="content" class="background chalkboard">
+     <div id="userpart">
+       <div id="hint" class="wooden-border wooden-border-sm" style="background-image: none;">
+        <div class="pin"></div>
+        <div id="hint-media"><span unselectable="on" class="resizeText">Σύνδρομο της επίκτητης......</span></div>
+       </div>
+       <div id="lines"><div class="line" data-letter="Α"></div><div class="line" data-letter="Ν"></div><div class="line" data-letter="Ο"></div><div class="line" data-letter="Σ"></div><div class="line" data-letter="Ο"></div><div class="line" data-letter="Α"></div><div class="line" data-letter="Ν"></div><div class="line" data-letter="Ε"></div><div class="line" data-letter="Π"></div><div class="line" data-letter="Α"></div><div class="line" data-letter="Ρ"></div><div class="line" data-letter="Κ"></div><div class="line" data-letter="Ε"></div><div class="line" data-letter="Ι"></div><div class="line" data-letter="Α"></div><div class="line" data-letter="Σ"></div></div>
+       <div id="keyboard"><div class="key" data-letter="Α"><div class="letter">Α</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Β"><div class="letter">Β</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Γ"><div class="letter">Γ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Δ"><div class="letter">Δ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ε"><div class="letter">Ε</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ζ"><div class="letter">Ζ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Η"><div class="letter">Η</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Θ"><div class="letter">Θ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ι"><div class="letter">Ι</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Κ"><div class="letter">Κ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Λ"><div class="letter">Λ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Μ"><div class="letter">Μ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ν"><div class="letter">Ν</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ξ"><div class="letter">Ξ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ο"><div class="letter">Ο</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Π"><div class="letter">Π</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ρ"><div class="letter">Ρ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Σ"><div class="letter">Σ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Τ"><div class="letter">Τ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Υ"><div class="letter">Υ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Φ"><div class="letter">Φ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Χ"><div class="letter">Χ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ψ"><div class="letter">Ψ</div><img src="./frame_enabled.png"></div><div class="key" data-letter="Ω"><div class="letter">Ω</div><img src="./frame_enabled.png"></div></div>
+      </div>
+      <div id="gallows" class="background gallow-1"></div>
+      <div id="nextRoundDisabler">
+       <div id="nextRoundDialog">
+        <div class="dialog-wrapper">
+         <img id="smile">
+         <div id="nextRoundBtn">Next round</div>
+        </div>
+       </div>
+     </div>
+    </div>
+  
+
+<div id="AppClientLoadingPanel" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; box-sizing: border-box; z-index: 999999; background-color: rgb(255, 255, 255); display: none;"><table style="box-sizing:border-box; width:100%;height:100%"><tbody><tr><td width="100%" align="center" style="color:#333;font-family:Arial;" id="LoadingPanelContent"><img src="./loading.gif" alt="" style="vertical-align:middle;margin:5px"> <b> Loading ... </b></td></tr></tbody></table></div><div id="AppClientTaskPanel" style="box-sizing: border-box; font-family: Arial; position: absolute; left: 0px; top: 20%; max-height: 65%; overflow: auto; z-index: 999998; padding: 10px; border: 10px solid rgb(221, 221, 221); box-shadow: rgb(51, 51, 51) 0px 0px 10px; border-radius: 10px; background-color: rgb(255, 255, 255); width: 40%; margin-left: 30%; margin-right: 30%;"><p style="text-align:center;font-size:150%;padding:0px;margin:0px;margin-bottom:5px"><b>Task</b></p><div style="max-height:195px;overflow:auto;">Πάτα πάνω στο γράμμα που πιστεύεις πως πρέπει να μπει στη λέξη της κρεμάλας! Φρόντισε το λουλουδάκι να μη χάσει όλα τα πέταλά του!</div><div style="margin-top:10px;text-align:center"><button type="button" onclick="AppClient.closeTaskPanel()" style="font-size:120%;z-index: 2;position: relative;">OK</button></div></div><div id="AppClientTaskButton" style="position: fixed; width: 16px; left: 2px; top: 2px; z-index: 999997;"><a style="padding:0px; margin:0px; text-decoration:none; font-size:16px" href="JavaScript:AppClient.showTaskPanel()"><img border="0" style="vertical-align:top" src="./taskicon.gif" title="Show task description" alt=""></a></div><div id="AppClientHelpButton" style="position: fixed; width: 16px; left: 22px; top: 2px; z-index: 999997; display: none;"><a style="padding:0px; margin:0px; text-decoration:none; font-size:16px" href="JavaScript:AppClient.showHelpPanel()"><img border="0" style="vertical-align:top" src="./helpicon.png" title="Show help" alt=""></a></div><div id="AppClientFullscreenButton" style="position: fixed; width: 16px; right: 2px; top: 2px; z-index: 999997;"><a style="padding:0px; margin:0px; text-decoration:none; font-size:16px" href="https://learningapps.org/watch?v=panssaz1c20" onclick="return AppClient.doFullscreen()" target="_blank"><img border="0" style="vertical-align:top" src="./fullscreenicon.png" title="Show App in fullscreen" alt=""></a></div><div class="preloader"><img src="./1.png" style="width: 100%;"><img src="./2.png" style="width: 100%;"><img src="./3.png" style="width: 100%;"><img src="./4.png" style="width: 100%;"><img src="./5.png" style="width: 100%;"><img src="./6.png" style="width: 100%;"><img src="./7.png" style="width: 100%;"><img src="./8.png" style="width: 100%;"><img src="./9.png" style="width: 100%;"><img src="./10.png" style="width: 100%;"><img src="./11.png" style="width: 100%;"><img src="./12.png" style="width: 100%;"><img src="./line.png" style="width: 100%;"><img src="./frame_enabled.png" style="width: 100%;"><img src="./frame_disabled.png" style="width: 100%;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
